@@ -12,17 +12,40 @@
     </header>
    <div class="pageLayout">
     <nav class="mainNav">
-        <a href="/prebuiltPage.html" class="nav-link">Prebuilt PC</a>
-        <a href="/specs" class="nav-link">PC Specs</a>
-        <a href="/subscriptions" class="nav-link">Subscriptions</a>
-        <a href="/cart" class="nav-link cart-link">
-            <span class="lucide--shopping-cart"></span>
-            Cart
-        </a>
-    </nav>
+            <a href="/main.html" class="nav-link">Main Page</a>
+            <a href="/prebuiltPage.html" class="nav-link">Prebuilt PCs</a>
+            <a href="/PCspecs.html" class="nav-link">PC Specs</a>
+            <a href="/subscriptions.html" class="nav-link">Subscriptions</a>
+            <label for="cartToggle" class="nav-link cart-link">
+                <span class="lucide--shopping-cart"></span>
+                Cart
+            </label>
+        </nav>
+
+        <!-- Cart Toggle Checkbox (hidden) -->
+        <input type="checkbox" id="cartToggle" class="cartToggle">
+
+        <!-- Cart Modal -->
+        <div class="cartModal">
+            <label for="cartToggle" class="cartModalOverlay"></label>
+            <div class="cartModalContent">
+                <div class="cartModalHeader">
+                    <h2>Shopping Cart</h2>
+                    <label for="cartToggle" class="closeBtn">&times;</label>
+                </div>
+                <div class="cartModalBody">
+                    <p class="emptyCart">Your cart is empty</p>
+                </div>
+                <div class="cartModalFooter">
+                    <div class="cartTotal">Total: <span>$0.00</span></div>
+                    <button class="checkoutBtn">Checkout</button>
+                </div>
+            </div>
+        </div>
+
     <div class="categories-wrapper">
         <article class="article">
-            <a href="">
+            <a href="prebuiltPage.html">
                 <div><img src="/images/pc.webp" alt="pc"></div>
                 <div class="row-name"><span>Prebuilt PC</span></div>
                 <div class="row-desc"><p>Powerful ready-to-use PCs straight out of the box — just plug in and play, no building required.</p></div>
@@ -30,7 +53,7 @@
             </a>
         </article>
         <article class="article">
-            <a href="">
+            <a href="PCspecs.html">
                 <div><img src="/images/rtx.webp" alt="pc"></div>
                 <div class="row-name"><span>PC Specs</span></div>
                 <div class="row-desc"><p>High-performance PC specs built for speed and reliability — optimized components that handle gaming, work, and multitasking effortlessly.</p></div>
@@ -38,7 +61,7 @@
             </a>
         </article>
         <article class="article">
-            <a href="">
+            <a href="subscriptions.html">
                 <div><img src="/images/Netflix.png" alt="pc"></div>
                 <div class="row-name"><span>subscriptions</span></div>
                 <div class="row-desc"><p>Flexible subscription plans designed for convenience — get instant access to premium features with simple, hassle-free billing.</p></div>
@@ -47,6 +70,24 @@
         </article>
     </div>
     </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cartModal">
+        <div class="cartModalContent">
+            <div class="cartModalHeader">
+                <h2>Shopping Cart</h2>
+                <button class="closeBtn" id="closeCart">&times;</button>
+            </div>
+            <div class="cartModalBody" id="cartItems">
+                <p class="emptyCart">Your cart is empty</p>
+            </div>
+            <div class="cartModalFooter">
+                <div class="cartTotal">Total: <span id="cartTotalPrice">$0.00</span></div>
+                <button class="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
     <footer class="informations">
         <div class="innerFooter">
         <p class="projectTeam">Project Team</p>
@@ -86,41 +127,8 @@
                 <span>group 4 - section 1</span>
             </div>
         </div>
-        <!--student 3-->
-        <div class="stundentCard">
-            <!--name-->
-            <div class="infoRow">
-                
-                <span class="lucide--user"></span>
-                <span>nigga3</span>
-            </div>
-            <!--email-->
-            <div class="infoRow">
-                <span class="lucide--mail"></span>
-                <span>nigga3@gmail.com</span>
-            </div>
-            <div class="infoRow">
-                <span class="lucide--id-card"></span>
-                <span>group 4 - section 1</span>
-            </div>
-        </div>
-        <!--student 4-->
-        <div class="stundentCard">
-            <!--name-->
-            <div class="infoRow">
-                <span class="lucide--user"></span>
-                <span>nigga4</span>
-            </div>
-            <!--email-->
-            <div class="infoRow">
-                <span class="lucide--mail"></span>
-                <span>nigga4@gmail.com</span>
-            </div>
-            <div class="infoRow">
-                <span class="lucide--id-card"></span>
-                <span>group 4 - section 1</span>
-            </div>
-        </div>
+
+        
     </div>
 </div>
     </footer>
